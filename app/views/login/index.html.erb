@@ -1,21 +1,54 @@
-<html>
-<head>
+		<header align='center'><font face="drawing guides" color="white" size="20"><br align="center">Welcome!</br></font>
 
+			<font face="drawing guides" color="white" size="5"><br>You're on your way to becoming a Junior Scientist!</br></font>
 
-</head>
-	<body>
+			<style type="text/css">
+          body{background:url('C:/Users/Tiffani/Desktop/backgrndpic.jpg')no-repeat;background-position:center;}
+          </style>
+		<br></br>
+
 		<form>
-			<input placeholder= "child's name"/> 
-			<input placeholder= "child's age"/>
-			<input placeholder="parent's email address"/>
-			<input placeholder="pincode" type="password"/>
-			<button type ="button">Submit</button>
-		
-		
-		</form>
-	
-	
-	
-	
-	</body>
-</html>	
+
+
+			<table align='center'>
+			<tr>
+			<td align="right"><font face="drawing guides" color="white" size="5">Child's Name:</font></td>
+			<td align="left"><input placeholder= "enter name"/></td>
+			</tr>
+
+			<tr>
+			<td align="right"><font face="drawing guides" color="white" size="5">Child's Age:</font></td>
+			<td align="left"><input type=numbers placeholder= "enter age" maxlength='2'onkeypress='return onlyNumbers();'/></td>
+			</tr>
+
+			<tr>
+			<td align="right"><font face="drawing guides" color="white" size="5">Your Email:</td></font>
+			<td align="left"><input placeholder="enter email address"/></td>
+			</tr>
+
+			<tr>
+
+			<td align="right"><font face="drawing guides" color="white" size="5">Create Pincode</font></td>
+			<td align="left"><input type= "password" onkeypress="return onlyNumbers();" placeholder= "enter pincode" maxlength="4"/></td>
+			</tr>
+
+			<tr>
+			<td align="right"><button type="submit">Submit</button>
+
+</table>
+
+</form>
+
+<script language="JavaScript">
+function onlyNumbers(evt)
+{
+  var e = event || evt; // for trans-browser compatibility
+  var charCode = e.which || e.keyCode;
+
+  if (charCode > 31 && (charCode < 48 || charCode > 57))
+    return false;
+
+  return true;
+
+}
+</script>
