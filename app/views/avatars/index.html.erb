@@ -20,6 +20,7 @@
 </head>
 
   <body>
+    <%= form_tag("/avatars",method:"post") do%>
     
 <br><img width="75px"id="dog"src="C:/Users/Stacey J/ULSafety/app/assets/images/dog.jpg" onclick= "showContinueButton(dog)"></br>
 <br><img width="75px"id="cat"src="C:/Users/Stacey J/ULSafety/app/assets/images/cat.jpg" onclick= "showContinueButton(cat)"></br>
@@ -28,9 +29,9 @@
 
 
 <div style="position:absolute;left:250px;top:350px;">
-<br><button>CONTINUE</button></br>
+<br><input type= "submit" value = "continue">
 </div>
-
+<% end %>
 
 
 
