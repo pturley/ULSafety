@@ -13,7 +13,8 @@
 		<br></br>
 		<body>
 
-		<form>
+		<%= form_tag("/login",method:"post") do%>
+
 
 
 			<table align='center'>
@@ -42,8 +43,8 @@
 			<td align="right"><button type="submit">Submit</button>
 
 </table>
+<% end %>
 
-</form>
 
 <script language="JavaScript">
 function onlyNumbers(evt)

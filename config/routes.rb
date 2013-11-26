@@ -10,6 +10,8 @@ ULSafety::Application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get 'avatars'=>'avatars#index'
   get 'login'=>'login#index'
+  post 'login'=>'login#create'
+  post 'avatars'=>'avatars#create'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
