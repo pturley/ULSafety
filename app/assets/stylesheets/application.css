@@ -11,3 +11,6 @@
  *= require_self
  *= require_tree .
  */
+ 	 .login {background-image:url('/assets/backgrndpic.jpg');
+ 	         background-repeat:no-repeat; 
+ 	  	     }
