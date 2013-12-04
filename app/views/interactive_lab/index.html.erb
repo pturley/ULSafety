@@ -4,7 +4,7 @@
 <style>
   body{
    
-  background-image:url('/assets/labpic1.jpg');  
+  background-image:url('/assets/bluelab.jpg');  
   background-size: 1365px 665px;
   background-repeat:no-repeat;
   background-attachment:fixed;
@@ -16,8 +16,41 @@
     border-style:dashed;
 
   }
+  .categoryicon{height: 50px; width: 50px;}
+  #scienceIcons{top:400px; left:30px; position:fixed;}
+
+  
+  #pamoeba {height: 200px; width:200px; position:fixed; left:1100px;top:450px}
 
 </style>
+
+<script type="text/javascript">
+  function IconSlideUp (selector){
+
+    $(selector).animate({top: "+=50px"}, IconSlideDown(selector));
+  }
+  function IconSlideDown(selector){
+
+    $(selector).animate({top: "-=50px"});
+  }
+
+  function IconSlideUpMove (selector){
+
+    $(selector).animate({top: "+=50px", width:"+=10px"}, IconSlideDownMove(selector));
+  }
+  function IconSlideDownMove(selector){
+
+    $(selector).animate({top: "-=50px", width:"-=10px"});
+  }
+
+  $(document).ready(function(){
+    var bounceInterval = setInterval(function(){ IconSlideUp('#scienceIcons')}, 1000);
+    var bounceInterval = setInterval(function(){ IconSlideUpMove('#pamoeba')}, -1000);
+
+  });
+
+</script>
+
 </head>
   
   <body>
@@ -34,13 +67,18 @@
       <button onclick="alert('Press OK to go to Parents Corner or X to cancel');"><font color="white" size="3";> PARENT'S CORNER </font></button>
     </div>
 
-    <div style="position:fixed; left:90px;top:450px">
-    <img width="150px" src="/assets/amoeba1.jpg"/>
+    <div>
+     <img src="/assets/purpleamoeba.png" class="categoryicon" id="pamoeba"/>
     </div>
 
-    <div style="position: fixed; left:705px; top:25px">
-      <img width="293px" height="270px" src="/assets/ulsign1.png"/>
+    <div style="position: fixed; left:420px; top:165px">
+      <img width="195px" height="130px" src="/assets/ulsign1.png"/>
     </div>
 
+    <div id="scienceIcons">
+      <img src= "/assets/sface.png" class="categoryicon"/>
+      <img src= "/assets/waterdrop.png" class="categoryicon" />
+      <img src= "/assets/flameicon.png" class="categoryicon"/>
+    </div>
   </body>
 </html> 
