@@ -17,6 +17,10 @@ ULSafety::Application.routes.draw do
   get 'interactive_lab'=>'interactive_lab#index'
   post 'interactive_lab'=>'interactive_lab#index'
 
+  get 'virtual_project'=>'virtual_project#index'
+  post'virtual_project'=>'virtual_project#create'
+
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
