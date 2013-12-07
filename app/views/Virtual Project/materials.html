@@ -1,0 +1,185 @@
+<html>
+		<head>
+			<meta charset="utf-8">
+			<script src="http://code.jquery.com/jquery-1.8.3.js"> </script>
+
+			<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+			<script src="htt//code.jquery.com/jquery-1.91.js"></script>
+			<script src="http//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+			<link rel="stylesheet"href="/resources/demos/style.css">
+
+			<script>
+				$(function(){
+					$("#dishsoap").draggable();
+					$("#foodcolor").draggable();
+					$("#dishsoap").draggable();
+					$("#dishsoap").draggable();
+				});
+
+			</script>
+
+			<style>
+
+				body{
+   
+					  background-image:url('image1/materialbackground.jpg');  
+					  background-size: 1365px 665px;
+					  background-repeat:no-repeat;
+					  background-attachment:fixed;
+					  background-position:center; 
+					}
+				#dishsoap
+				{
+					position: absolute;
+					left:325px;
+					top:310px;
+				}
+				#foodcolor
+				{
+					position: absolute;
+					left:425px;
+					top:310px;
+				}
+				#peroxide
+				{
+					position: absolute;
+					left:325px;
+					top:410px;
+				}
+				#wateryeast
+				{
+					position: absolute;
+					left:425px;
+					top:410px;
+				}
+				#shelf
+				{
+					position: absolute;
+					left:250px;
+					top:260px;
+					width:300px;
+					height:400px;
+				}
+				#verticalshelf
+				{
+					position: absolute;
+					left:800px;
+					top:300px;
+					width:275px;
+					height:350px;
+				}
+
+
+			</style>
+				
+		</head> 	
+	<body>
+
+			<img  id="shelf" src="image1/shelf.png"/>
+			<img  id="verticalshelf" src="image1/verticalshelf.jpg"/>
+			<img width="50px" id="dishsoap" src="image1/dishsoap.jpg"/>
+			<img width="50px" id="foodcolor" src="image1/foodcolor.jpg"/>
+			<img width="50px" id="peroxide" src="image1/peroxide.jpg"/>
+			<img width="50px" id="wateryeast" src="image1/wateryeast.jpg"/>
+			
+
+
+
+
+
+<!--buttons-->
+		<button onclick="alert('hello world');">
+			Hello World!!!
+		</button> 
+			<button onclick="speak_hello_world();">
+				Hello World!!!
+			</button> 
+				<button onclick="square();">
+					Square
+				</button>
+					<button onclick="triangle();">
+						Triangle
+					</button>
+						<button onclick="dimond();">
+							Dimond
+						</button>
+							<button onclick="bounce();">
+								Bounce
+							</button>
+								<button onclick="move_up(10);">
+									move up 10
+								</button>
+									<button onclick="make_x(1);">
+										make x
+									</button>
+<!--table-->
+			<table border="6px"> 
+			<tr>
+				<td><button onclick="move_up_left(10);">up left</button></td>
+				<td><button onclick="move_up(10);">move up</button></td>
+				<td><button onclick="move_up_right(10);">up right</button></td>
+				
+			</tr>
+
+			<tr>
+				<td><button onclick="move_left(10);">move left</button></td>
+				<td></td>
+				<td><button onclick="move_right(10);">move right</button></td> 
+			</tr>
+
+			<tr>
+				<td><button onclick="move_down_left(10);">down left</button></td>
+				<td><button onclick="move_down(10);">move down</button></td>
+				<td><button onclick="move_down_right(10);">down right</button></td>
+			</tr>
+										
+			</table>
+<!--red ball image-->		
+
+	</body>
+		<script>
+			function AnimationObject(cssid)
+		{
+			this.fade_out=function()
+			{
+				$(cssid).fadeOut(1000);
+			}
+			this.fade_in=function()
+			{
+				$(cssid).fadeIn(1000);
+			}
+			this.move=function(dx,dy){
+				console.log("distance across:"+dx);
+				console.log("distance up,down:"+dy); 
+				var offset=$(cssid).offset();
+				offset.left=offset.left+dx;
+				offset.top=offset.top+dy;
+				$(cssid).css({top:offset.top+'px',left:offset.left+'px'});
+			}
+		
+		}	
+		function move_downleft(){
+			dishsoap.top=dishsoap.top+10
+			dishsoap.left=dishsoap.left-10
+		}
+		function move_downright(){
+			redball.top=redball.top+10
+			redball.left=redball.left+10
+		}
+		function move_upright(){
+			redball.top=redball.top-10
+			redball.left=redball.left+10
+		}
+		function move_upleft(){
+			redball.top=redball.top-10
+			redball.left=redball.left-10
+		}
+		$(document).ready(function()
+			{
+				redballobj=new AnimationObject("#dishsoap");
+				console.log("document ready ran");
+				greenballobj=new AnimationObject("#greenball");
+			});
+
+		</script>
+</html>
