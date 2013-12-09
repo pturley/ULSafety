@@ -1,4 +1,4 @@
-class VirtualProject <ApplicationController
+class VirtualProjectController < ApplicationController
 	def index
 	end
 

@@ -60,7 +60,7 @@
     </div> 
 
     <div style="position:fixed;left:160px;top:525px">
-      <button onclick="alert('Press OK to select a new science or X to cancel');"><font color="white" size= "3";> SELECT A SCIENCE </font></button>
+      <%= link_to "SELECT A SCIENCE", virtual_project_path, :confirm => 'Are you sure you want to select a science?', :style => "color:  white; background-color: red; border-style: dotted; font-size: 1.2em; padding: 3px;" %>
     </div>
 
     <div style="position:fixed;left:432px;top:160px"> 
