@@ -3,6 +3,6 @@ class LoginController <ApplicationController
 	end
 
 	def create 
-		redirect_to'/avatars'
+		redirect_to'/interactive_lab'
 	end
 end
